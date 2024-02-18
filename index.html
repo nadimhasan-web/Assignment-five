@@ -19,7 +19,7 @@
             <h1 class="font-extrabold text-2xl lg:text-6xl text-white text-center">End-to-End Travel with <br> <span class="text-[#1DD100]">Green Paribahan</span></h1>
             <p class="font_inter text-lg lg:text-xl mt-4 text-center text-white">Your one-stop destination for hassle-free event bookings! Explore and <br> reserve tickets effortlessly on our user-friendly platform.</p>
             <div class="flex justify-center">
-                <button id="buy_ticket" class="bg-[#1DD100] text-lg lg:text-xl text-[#030712] font-bold font_raleway rounded-xl px-4 lg:px-7 py-3 lg:py-5 mt-8">Buy Ticket</button>
+                <button id="buy_ticket" class="bg-[#1DD100] text-lg lg:text-xl text-[#030712] font-bold font_raleway rounded-xl px-4 lg:px-7 py-3 lg:py-5 mt-8"><a href="green_line_ticket">Buy Ticket</a></button>
             </div>
             <div class="flex flex-col lg:flex-row gap-5 mt-5 lg:mt-0 lg:relative lg:top-28">
                 <!-- one -->
@@ -90,7 +90,7 @@
             </div>
         </section>
         <!-- paribahan -->
-        <section class="border-t-2 rounded-3xl bg-[#F7F8F8] border-[#1DD100] py-5 lg:py-[100px] ">
+        <section id="green_line_ticket" class="border-t-2 rounded-3xl bg-[#F7F8F8] border-[#1DD100] py-5 lg:py-[100px] ">
             <div class="mx-2 lg:mx-[110px]">
                 <h2 class="font_raleway text-[#030712] text-2xl lg:text-4xl font-bold text-center">Green Line pribahan</h2>
                 <p class="font_inter text-[rgba(3,7,18,0.60)] text-lg lg:text-xl text-center mt-6">Green Line Paribahan is a prominent transportation company in Bangladesh, renowned for <br> its reliable bus services connecting major cities. With a commitment to passenger <br> safety and comfort, it offers efficient travel solutions across the country.</p>
@@ -98,9 +98,9 @@
             <!-- seat serial -->
             <div>
                 <div class="flex flex-col lg:flex-row bg-white mt-4 lg:mt-10 mx-2 lg:mx-[110px] rounded-3xl">
-                    <!-- left -->
+                    <!-- left side-->
                     <div class="p-3 lg:p-8">
-                        <!-- seat -->
+                        <!-- seat count -->
                         <div class="flex flex-col lg:flex-row mt-3 gap-4 lg:gap-40">
                             <div class="flex flex-col lg:flex-row gap-4">
                                 <img class="hidden lg:block" src="images/bus-logo.png" alt="bus">
@@ -110,7 +110,7 @@
                                 </div>
                             </div>
                             <div class="rounded-xl bg-[rgba(28,209,0,0.15)] p-4">
-                                <p class="font-medium font_inter text-lg text-[#1DD100]"><span>40</span> Seats left</p>
+                                <p class="font-medium font_inter text-lg text-[#1DD100]"><span id="seat_left">40</span> Seats left</p>
                             </div>
                         </div>
                         <!-- rout -->
@@ -140,7 +140,7 @@
                     </div>
                 </div>
             </div>
-            <!-- select seat -->
+            <!-- select your seat -->
             <div class="grid grid-cols-12 gap-5 lg:gap-0 bg-white mt-4 lg:mt-10 mx-2 lg:mx-[110px] rounded-3xl p-3 lg:p-8">
                 <!-- left side -->
                 <div class="col-span-12 lg:col-span-7 lg:border-r lg:border-dashed lg:border-[rgba(3,7,18,0.30)] pr-0 lg:pr-4">
@@ -156,7 +156,7 @@
                         </div>
                     </div>
                     <div class="flex justify-end mt-6">
-                        <img class="bg-[rgba(3,7,18,0.10)] rounded-xl px-4 lg:px-7 py-2 lg:py-3" src="images/stearing.png" alt="stearing">
+                        <img class="bg-[rgba(3,7,18,0.10)] rounded-xl px-3 lg:px-10 py-2 lg:py-3" src="images/stearing.png" alt="stearing">
                     </div>
                     <!-- seat serial -->
                     <div>
@@ -164,91 +164,91 @@
                         <div class="font_inter text-lg font-medium text-[rgba(3,7,18,0.50)] flex
                         gap-2 lg:gap-7 mt-6">
                             <p class="py-2 lg:py-4">A</p>
-                            <p id="a1" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">A1</p>
-                            <p id="a2" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">A2</p>
-                            <p id="a3" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">A3</p>
-                            <p id="a4" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">A4</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">A1</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">A2</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">A3</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">A4</p>
                         </div>
                         <!-- B -->
                         <div class="font_inter text-lg font-medium text-[rgba(3,7,18,0.50)] flex
                         gap-2 lg:gap-7 mt-6">
-                            <p class="py-2 lg:py-4">A</p>
-                            <p id="a1" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">B1</p>
-                            <p id="a2" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">B2</p>
-                            <p id="a3" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">B3</p>
-                            <p id="a4" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">B4</p>
+                            <p class="py-2 lg:py-4">B</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">B1</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">B2</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">B3</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">B4</p>
                         </div>
                         <!-- C -->
                         <div class="font_inter text-lg font-medium text-[rgba(3,7,18,0.50)] flex
                         gap-2 lg:gap-7 mt-6">
-                            <p class="py-2 lg:py-4">A</p>
-                            <p id="a1" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">C1</p>
-                            <p id="a2" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">C2</p>
-                            <p id="a3" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">C3</p>
-                            <p id="a4" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">C4</p>
+                            <p class="py-2 lg:py-4">C</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">C1</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">C2</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">C3</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">C4</p>
                         </div>
                         <!-- D -->
                         <div class="font_inter text-lg font-medium text-[rgba(3,7,18,0.50)] flex
                         gap-2 lg:gap-7 mt-6">
                             <p class="py-2 lg:py-4">D</p>
-                            <p id="a1" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">D1</p>
-                            <p id="a2" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">D2</p>
-                            <p id="a3" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">D3</p>
-                            <p id="a4" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">D4</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">D1</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">D2</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">D3</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">D4</p>
                         </div>
                         <!-- E -->
                         <div class="font_inter text-lg font-medium text-[rgba(3,7,18,0.50)] flex
                         gap-2 lg:gap-7 mt-6">
                             <p class="py-2 lg:py-4">E</p>
-                            <p id="a1" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">E1</p>
-                            <p id="a2" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">E2</p>
-                            <p id="a3" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">E3</p>
-                            <p id="a4" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">E4</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">E1</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">E2</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">E3</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">E4</p>
                         </div>
                         <!-- F -->
                         <div class="font_inter text-lg font-medium text-[rgba(3,7,18,0.50)] flex
                         gap-2 lg:gap-7 mt-6">
                             <p class="py-2 lg:py-4">F</p>
-                            <p id="a1" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">F1</p>
-                            <p id="a2" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">F2</p>
-                            <p id="a3" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">F3</p>
-                            <p id="a4" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">F4</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">F1</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">F2</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">F3</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">F4</p>
                         </div>
                         <!-- G -->
                         <div class="font_inter text-lg font-medium text-[rgba(3,7,18,0.50)] flex
                         gap-2 lg:gap-7 mt-6">
                             <p class="py-2 lg:py-4">G</p>
-                            <p id="a1" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">G1</p>
-                            <p id="a2" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">G2</p>
-                            <p id="a3" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">G3</p>
-                            <p id="a4" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">G4</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">G1</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">G2</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">G3</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">G4</p>
                         </div>
                         <!-- H -->
                         <div class="font_inter text-lg font-medium text-[rgba(3,7,18,0.50)] flex
                         gap-2 lg:gap-7 mt-6">
                             <p class="py-2 lg:py-4">H</p>
-                            <p id="a1" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">H1</p>
-                            <p id="a2" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">H2</p>
-                            <p id="a3" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">H3</p>
-                            <p id="a4" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">H4</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">H1</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">H2</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">H3</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">H4</p>
                         </div>
                         <!-- I -->
                         <div class="font_inter text-lg font-medium text-[rgba(3,7,18,0.50)] flex
                         gap-2 lg:gap-7 mt-6">
-                            <p class="py-2 lg:py-4">A</p>
-                            <p id="a1" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">I1</p>
-                            <p id="a2" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">I2</p>
-                            <p id="a3" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">I3</p>
-                            <p id="a4" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">I4</p>
+                            <p class="py-2 lg:py-4">I</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">I1</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">I2</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">I3</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">I4</p>
                         </div>
                         <!-- J -->
                         <div class="font_inter text-lg font-medium text-[rgba(3,7,18,0.50)] flex
                         gap-2 lg:gap-7 mt-6">
-                            <p class="py-2 lg:py-4">A</p>
-                            <p id="a1" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">J1</p>
-                            <p id="a2" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">J2</p>
-                            <p id="a3" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">J3</p>
-                            <p id="a4" class="rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">J4</p>
+                            <p class="py-2 lg:py-4">J</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border">J1</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">J2</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border ml-3" ml-4">J3</p>
+                            <p class="seats rounded-xl bg-[#F7F8F8] w-[70px] lg:w-[110px] h-[40px] lg:h-[55px] flex justify-center items-center box-border"">J4</p>
                         </div>
                         
                     </div>
@@ -259,25 +259,23 @@
                     <!-- amount -->
                     <div class="rounded-xl bg-[#F7F8F8] p-6 mt-4">
                         <div class="flex justify-between border-b border-dashed border-[rgba(3,7,18,0.50)] pb-3">
-                            <p class="font_inter font-medium text-[#030712]">Seat <span class="font-bold text-white text-xs bg-[#1DD100] rounded-md p-1">0</span></p>
+                            <p class="font_inter font-medium text-[#030712]">Seat <span id="selected_seat" class="font-bold text-white text-xs bg-[#1DD100] rounded-md p-1">0</span></p>
                             <p class="font_inter font-medium text-[#030712]">Class</p>
                             <p class="font_inter font-medium text-[#030712]">Price</p>
                         </div>
                         <div class="py-4 border-b border-[rgba(3,7,18,0.20)]">
-                            <div class="text-[rgba(3,7,18,0.60)] font_inter flex justify-between">
-                                <p>c2</p>
-                                <p>Economy</p>
-                                <p>550</p>
+                            <div id="seat_price" class="text-[rgba(3,7,18,0.60)] font_inter ">
+                                
                             </div>
                             <div class="text-[rgba(3,7,18,0.60)] font_inter flex justify-between">
-                                <p>c2</p>
-                                <p>Economy</p>
-                                <p>550</p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
                             </div>
                         </div>
                         <div class="font_inter font-medium text-[#030712] flex justify-between mt-4">
                             <p>Total Price</p>
-                            <p>BDT 1100</p>
+                            <p id="total_price">0</p>
                         </div>
                         <!-- coupon input -->
                         <div class="bg-white flex flex-col lg:flex-row gap-4 lg:gap-0 justify-between p-2 rounded-xl mt-4">
@@ -286,20 +284,20 @@
                         </div>
                         <div class="font_inter font-medium text-[#030712] flex justify-between mt-4">
                             <p>Grand Total</p>
-                            <p>BDT 1100</p>
+                            <p id="grand_total">0</p>
                         </div>
                     </div>
                     <!-- passenger input -->
                     <div class="py-6">
                         <p class="font_inter font-semibold text-[#030712]">Passenger Name*</p>
-                        <input class="font_inter text-[rgba(3,7,18,0.40)] border border-[rgba(3,7,18,0.10)] rounded-xl p-3 lg:p-5 w-full my-2 lg:my-4" type="text" placeholder="Enter your name">
+                        <input class="font_inter outline-none text-[rgba(3,7,18,0.40)] border border-[rgba(3,7,18,0.10)] rounded-xl p-3 lg:p-5 w-full my-2 lg:my-4" type="text" placeholder="Enter your name">
                         <p class="font_inter font-semibold text-[#030712]">Phone Number*</p>
-                        <input class="font_inter text-[rgba(3,7,18,0.40)] border border-[rgba(3,7,18,0.10)] rounded-xl p-3 lg:p-5 w-full my-2 lg:my-4" type="number" placeholder="Enter your name">
+                        <input class="font_inter outline-none text-[rgba(3,7,18,0.40)] border border-[rgba(3,7,18,0.10)] rounded-xl p-3 lg:p-5 w-full my-2 lg:my-4" type="number" placeholder="Enter your name">
                         <p class="font_inter font-semibold text-[#030712]">Email ID</p>
-                        <input class="font_inter text-[rgba(3,7,18,0.40)] border border-[rgba(3,7,18,0.10)] rounded-xl p-3 lg:p-5 w-full my-2 lg:my-4" type="email" placeholder="Enter your name">
+                        <input class="font_inter outline-none text-[rgba(3,7,18,0.40)] border border-[rgba(3,7,18,0.10)] rounded-xl p-3 lg:p-5 w-full my-2 lg:my-4" type="email" placeholder="Enter your name">
                     </div>
                     <!-- next button -->
-                    <button class="font-extrabold text-white font_inter text-xl bg-[#1DD100] rounded-xl w-full p-3 lg:p-5">
+                    <button id="next_btn" class="font-extrabold text-white font_inter text-xl bg-[#1DD100] rounded-xl w-full p-3 lg:p-5">
                         Next
                     </button>
                     <!-- terms & condition -->
@@ -327,7 +325,7 @@
             </div>
         </section>
     </main>
-    <footer class="bg-[#030712]">
+    <footer id="footer" class="bg-[#030712]">
         <div class="mx-2 lg:mx-[110px] py-10 lg:py-[100px]">
             <div class="flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between border-b border-dashed border-[rgba(255,255,255,0.30)] pb-10">
                 <div>

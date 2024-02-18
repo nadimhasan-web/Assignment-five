@@ -13,3 +13,8 @@
 .font_roboto{
     font-family: "Roboto", sans-serif;
 }
+li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
