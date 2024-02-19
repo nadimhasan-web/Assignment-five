@@ -11,8 +11,34 @@
 <body>
     <header>
         <nav class="mx-2 lg:mx-[110px] flex justify-between py-5 lg:py-10">
-            <h2 class="text-2xl lg:text-4xl font-extrabold text-[#030712] font_raleway">Online Ticket</h2>
-            <button class="flex gap-3 border rounded-xl border-[rgba(28,209,0,0.40)] font-bold text-lg lg:text-xl font_raleway text-[#1DD100] px-5 lg:px-7 py-2 lg:py-4 bg-[rgba(28,209,0,0.10)]">Bus <img src="images/bus-icon.png" alt="bus"></button>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Destination</a></li>
+                      <li><a>Search</a></li>
+                      
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-lg lg:text-4xl font-extrabold text-[#030712] font_raleway">Online Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                      <li><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Destination</a></li>
+                      <li><a>Search</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                    <button class="flex gap-2 lg:gap-3 border rounded-xl border-[rgba(28,209,0,0.40)] font-bold text-lg lg:text-xl font_raleway text-[#1DD100] px-3 lg:px-7 py-2 lg:py-4 bg-[rgba(28,209,0,0.10)]">Bus <img src="images/bus-icon.png" alt="bus"></button>
+                </div>
+              </div>
         </nav>
         <!-- banner -->
         <div class="mx-2 lg:mx-[110px] bg-[url(./images/banner.png)] bg-center bg-no-repeat     bg-cover rounded-2xl lg:rounded-[32px] py-5 lg:py-16 px-6 lg:px-20">
@@ -65,7 +91,7 @@
                         <img class="h-44 hidden lg:block" src="images/cupon-devider.png" alt="devider">
                     </div>
                     <div class="px-8">
-                        <h3 class="font_raleway font-bold text-3xl text-[rgba(3,7,18,0.80)]">NEW15</h3>
+                        <h3 id="NEW15" class="font_raleway font-bold text-3xl text-[rgba(3,7,18,0.80)]">NEW15</h3>
                         <p>Coupon Code</p>
                     </div>
                 </div>
@@ -80,7 +106,7 @@
                         <img class="h-44 hidden lg:block" src="images/cupon-devider.png" alt="devider">
                     </div>
                     <div class="p-6">
-                        <h3 class="font_raleway font-bold text-3xl text-[rgba(3,7,18,0.80)]">Couple 20</h3>
+                        <h3 id="Couple 20" class="font_raleway font-bold text-3xl text-[rgba(3,7,18,0.80)]">Couple 20</h3>
                         <p>Coupon Code</p>
                     </div>
                 </div>
@@ -267,11 +293,7 @@
                             <div id="seat_price" class="text-[rgba(3,7,18,0.60)] font_inter ">
                                 
                             </div>
-                            <div class="text-[rgba(3,7,18,0.60)] font_inter flex justify-between">
-                                <p></p>
-                                <p></p>
-                                <p></p>
-                            </div>
+                            
                         </div>
                         <div class="font_inter font-medium text-[#030712] flex justify-between mt-4">
                             <p>Total Price</p>
@@ -279,8 +301,8 @@
                         </div>
                         <!-- coupon input -->
                         <div class="bg-white flex flex-col lg:flex-row gap-4 lg:gap-0 justify-between p-2 rounded-xl mt-4">
-                            <input class="font_inter bg-transparent outline-none text-[rgba(3,7,18,0.40)] text-sm" type="text" placeholder="Have any copupon?">
-                            <button class="font_inter font-semibold text-white bg-[#1DD100] px-4 py-2 rounded-xl">Apply</button>
+                            <input id="coupon_input" class="font_inter bg-transparent outline-none text-[rgba(3,7,18,0.40)] text-sm" type="text" placeholder="Have any copupon?">
+                            <button id="apply" class="hidden font_inter font-semibold text-white bg-[#1DD100] px-4 py-2 rounded-xl">Apply</button>
                         </div>
                         <div class="font_inter font-medium text-[#030712] flex justify-between mt-4">
                             <p>Grand Total</p>
@@ -308,7 +330,7 @@
                 </div>
             </div>
         </section>
-        <section class="hidden">
+        <section id="success" class="hidden">
             <div class=" bg-[#F7F8F8] flex justify-center items-center">
                 <div class="bg-[#ffffff] rounded-xl p-5 lg:p-14 space-y-3 lg:space-y-5 my-0 lg:my-10">
                     <div class="flex justify-center">

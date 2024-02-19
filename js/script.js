@@ -3,24 +3,15 @@ let count = 40;
 let select = 0;
 let seatSelect = [];
 for(const seat of allSeat){
-    
+
     seat.addEventListener('click', function(e){
+        if(count == 36){
+            return alert('already 4 seat selected');
+        }
         count = count -1;
         setInnerText('seat_left', count);
         select = select + 1;
-        setInnerText('selected_seat', select);
-        // 
-        for(let i = 0; i < count; i++){
-            const i = e.target.innerText;
-            console.log(seatSelect);
-            if(i < 36){
-                return count;
-            }
-        }
-        // 
-        if(count < 36){
-            return count;
-        }
+        setInnerText('selected_seat', select); 
         // set seat bg color
         e.target.style.backgroundColor = "#1DD100";
         e.target.style.color='#fff'
@@ -33,7 +24,7 @@ for(const seat of allSeat){
         const p2 = document.createElement('p');
         p2.innerText = 'Economic';
         const p3 = document.createElement('p');
-        p3.innerText = 500;
+        p3.innerText = 550;
         selectedSeatPrice.appendChild(p1);
         selectedSeatPrice.appendChild(p2);
         selectedSeatPrice.appendChild(p3);
@@ -43,13 +34,20 @@ for(const seat of allSeat){
         const convertedTotalPrice = parseInt(totalPrice);
         const totalSum = convertedTotalPrice+parseInt(p3.innerText);
         setInnerText('total_price', totalSum);
+        // coupon 
+        const couponInput = document.getElementById('coupon_input').value;
+        if(couponInput === 'NEW15'){
+            showElementById('apply');
+        }
         // grand total
         const grandTotal = document.getElementById('grand_total').innerText;
         const convertedGrandTotalPrice = parseInt(grandTotal);
         const grandTotalSum = convertedGrandTotalPrice + parseInt(p3.innerText);
         setInnerText('grand_total', grandTotalSum);
         // next btn click
-        const nextBtn = document.getElementById('next_btn');
+        const success = document.getElementById('next_btn').addEventListener('click', function() {
+            success.classList.remove('hidden');
+        });
     })
 }
 // set inner text
