@@ -1,26 +1,33 @@
 const allSeat = document.getElementsByClassName('seats');
-let count = 40;
+console.log(allSeat);
+let seats = 40;
 let select = 0;
+let count = 0;
 let seatSelect = [];
-for(const seat of allSeat){
+for (const seat of allSeat) {
 
-    seat.addEventListener('click', function(e){
-        if(count == 36){
+    seat.addEventListener('click', function (e) {
+        
+        if (count >= 4) {
             return alert('already 4 seat selected');
         }
-        count = count -1;
-        setInnerText('seat_left', count);
+        count++;
+        if(seats === 0){
+            return alert('all seats booked');
+        }
+        seats = seats - 1;
+        setInnerText('seat_left', seats);
         select = select + 1;
-        setInnerText('selected_seat', select); 
+        setInnerText('selected_seat', select);
         // set seat bg color
         e.target.style.backgroundColor = "#1DD100";
-        e.target.style.color='#fff'
+        e.target.style.color = '#fff';
         // create element
         const selectedSeat = e.target.innerText;
         const seatPrice = document.getElementById('seat_price');
-        const selectedSeatPrice =document.createElement('li')
+        const selectedSeatPrice = document.createElement('li')
         const p1 = document.createElement('p');
-        p1.innerText =selectedSeat;
+        p1.innerText = selectedSeat;
         const p2 = document.createElement('p');
         p2.innerText = 'Economic';
         const p3 = document.createElement('p');
@@ -32,41 +39,47 @@ for(const seat of allSeat){
         // total price
         const totalPrice = document.getElementById('total_price').innerText;
         const convertedTotalPrice = parseInt(totalPrice);
-        const totalSum = convertedTotalPrice+parseInt(p3.innerText);
+        const totalSum = convertedTotalPrice + parseInt(p3.innerText);
         setInnerText('total_price', totalSum);
-        // coupon 
-        const couponInput = document.getElementById('coupon_input').value;
-        if(couponInput === 'NEW15'){
-            showElementById('apply');
-        }
+
         // grand total
         const grandTotal = document.getElementById('grand_total').innerText;
         const convertedGrandTotalPrice = parseInt(grandTotal);
-        const grandTotalSum = convertedGrandTotalPrice + parseInt(p3.innerText);
+        let grandTotalSum = convertedGrandTotalPrice + parseInt(p3.innerText);
         setInnerText('grand_total', grandTotalSum);
+        // coupon 
+        document.getElementById('apply').addEventListener('click', function () {
+            const couponInput = document.getElementById('coupon_input').value;
+            if (couponInput === 'NEW15') {
+                grandTotalSum = grandTotalSum - grandTotalSum*0.15;
+                hideElementById('coupon_section');
+            }else if(couponInput === 'Couple 20'){
+                grandTotalSum = grandTotalSum - grandTotalSum*0.20;
+                hideElementById('coupon_section');
+            }else{
+                return alert('this coupon is not valid');
+            }
+            setInnerText('grand_total', grandTotalSum);
+            console.log(grandTotalSum);
+        })
         // next btn click
-        const success = document.getElementById('next_btn').addEventListener('click', function() {
+        const success = document.getElementById('next_btn').addEventListener('click', function () {
             success.classList.remove('hidden');
         });
     })
 }
+
 // set inner text
-function setInnerText(id, value){
+function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
-// set seat bg
-function seatBgColorById(elementId){
-    const element = document.getElementById(elementId);
-    element.classList.add('bg-green-500');
-}
 // show element
-function showElementById(elementId){
+function showElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('hidden');
 }
 // hide element
-function hideElementById(elementId){
+function hideElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('hidden');
 }
-

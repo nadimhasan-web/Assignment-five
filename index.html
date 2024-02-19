@@ -45,7 +45,7 @@
             <h1 class="font-extrabold text-2xl lg:text-6xl text-white text-center">End-to-End Travel with <br> <span class="text-[#1DD100]">Green Paribahan</span></h1>
             <p class="font_inter text-lg lg:text-xl mt-4 text-center text-white">Your one-stop destination for hassle-free event bookings! Explore and <br> reserve tickets effortlessly on our user-friendly platform.</p>
             <div class="flex justify-center">
-                <button id="buy_ticket" class="bg-[#1DD100] text-lg lg:text-xl text-[#030712] font-bold font_raleway rounded-xl px-4 lg:px-7 py-3 lg:py-5 mt-8"><a href="green_line_ticket">Buy Ticket</a></button>
+                <button id="buy_ticket" class="bg-[#1DD100] text-lg lg:text-xl text-[#030712] font-bold font_raleway rounded-xl px-4 lg:px-7 py-3 lg:py-5 mt-8"><a href="#green_line_ticket">Buy Ticket</a></button>
             </div>
             <div class="flex flex-col lg:flex-row gap-5 mt-5 lg:mt-0 lg:relative lg:top-28">
                 <!-- one -->
@@ -79,7 +79,7 @@
         <!-- best offer -->
         <section class="mx-2 lg:mx-[110px] ">
             <h2 class="font-bold text-3xl lg:text-4xl text-[#030712] text-center mt-10 lg:mt-[150px] font_raleway">Best offers for you</h2>
-            <div class="flex flex-col lg:flex-row gap-7">
+            <div class="flex flex-col lg:flex-row gap-3 lg:gap-7">
                 <!-- 15% -->
                 <div class="flex flex-col lg:flex-row gap-4 items-center bg-[#FFBF0F] rounded-3xl my-12">
                     <div class="px-8">
@@ -116,7 +116,7 @@
             </div>
         </section>
         <!-- paribahan -->
-        <section id="green_line_ticket" class="border-t-2 rounded-3xl bg-[#F7F8F8] border-[#1DD100] py-5 lg:py-[100px] ">
+        <section id="green_line_ticket" class="border-t-2 rounded-3xl lg:rounded-[88px] bg-[#F7F8F8] border-[#1DD100] py-5 lg:py-[100px] ">
             <div class="mx-2 lg:mx-[110px]">
                 <h2 class="font_raleway text-[#030712] text-2xl lg:text-4xl font-bold text-center">Green Line pribahan</h2>
                 <p class="font_inter text-[rgba(3,7,18,0.60)] text-lg lg:text-xl text-center mt-6">Green Line Paribahan is a prominent transportation company in Bangladesh, renowned for <br> its reliable bus services connecting major cities. With a commitment to passenger <br> safety and comfort, it offers efficient travel solutions across the country.</p>
@@ -300,9 +300,9 @@
                             <p id="total_price">0</p>
                         </div>
                         <!-- coupon input -->
-                        <div class="bg-white flex flex-col lg:flex-row gap-4 lg:gap-0 justify-between p-2 rounded-xl mt-4">
+                        <div id="coupon_section" class="bg-white flex flex-col lg:flex-row gap-4 lg:gap-0 justify-between p-2 rounded-xl mt-4">
                             <input id="coupon_input" class="font_inter bg-transparent outline-none text-[rgba(3,7,18,0.40)] text-sm" type="text" placeholder="Have any copupon?">
-                            <button id="apply" class="hidden font_inter font-semibold text-white bg-[#1DD100] px-4 py-2 rounded-xl">Apply</button>
+                            <button id="apply" class=" font_inter font-semibold text-white bg-[#1DD100] px-4 py-2 rounded-xl">Apply</button>
                         </div>
                         <div class="font_inter font-medium text-[#030712] flex justify-between mt-4">
                             <p>Grand Total</p>
@@ -320,7 +320,7 @@
                     </div>
                     <!-- next button -->
                     <button id="next_btn" class="font-extrabold text-white font_inter text-xl bg-[#1DD100] rounded-xl w-full p-3 lg:p-5">
-                        Next
+                        <a href="success.html">Next</a>
                     </button>
                     <!-- terms & condition -->
                     <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 justify-around mt-6">
@@ -330,22 +330,7 @@
                 </div>
             </div>
         </section>
-        <section id="success" class="hidden">
-            <div class=" bg-[#F7F8F8] flex justify-center items-center">
-                <div class="bg-[#ffffff] rounded-xl p-5 lg:p-14 space-y-3 lg:space-y-5 my-0 lg:my-10">
-                    <div class="flex justify-center">
-                        <img src="images/success.png" alt="success">
-                    </div>
-                    <p class="font_roboto font-bold text-2xl text-[#27AE60] text-center">Success</p>
-                    <p class="font_roboto font-medium text-[#4A4A4A] text-xl text-center">Thank you for Booking Our Bus Seats. <br> 
-                        We are working hard to find the best service and deals for you.</p>
-                    <p class="font_roboto font-light text-[#4A4A4A] text-xl text-center">Shortly you will find a confirmation in your email.</p>
-                    <div class="flex justify-center">
-                        <button id="continue" class="font_roboto font-semibold text-xl text-white rounded-[32px] bg-[#27AE60] text-center py-4 px-24">Continue</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
     </main>
     <footer id="footer" class="bg-[#030712]">
         <div class="mx-2 lg:mx-[110px] py-10 lg:py-[100px]">
